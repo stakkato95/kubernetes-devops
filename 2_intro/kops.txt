@@ -1,0 +1,18 @@
+kops create cluster --name=kubernetes.some.address --satte=s3://kops-state-bucket --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zonekubernetes.some.address
+
+kops edit cluster kubernetes.some.address --state://kops-state-bucket
+
+kops update cluster kubernetes.some.address --yes --state=s3://kops-state-bucket
+
+kubectl get node
+
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+
+kubectl expose depolyment hello-minikube --type=NodePort --port=8080
+
+kubectl get services
+
+
+kops delete cluster kubernetes.some.address --state=s3://kops-state-bucket
+
+kops delete cluster kubernetes.some.address --state=s3://kops-state-bucket --yes
