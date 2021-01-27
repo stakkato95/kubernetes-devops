@@ -10,3 +10,6 @@ kubectl describe service nodehelloworld-example-com
 kubectl run -i --tty busybox --image busybox --restart=Never
 //im Pod: telnet 10.1.0.15 8080
 //im Pod: GET /
+
+//show logs
+kubectl logs nodehelloworld.example.com
