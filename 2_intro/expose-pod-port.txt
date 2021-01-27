@@ -1,0 +1,3 @@
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name=nodehelloworld-example-com
+
+kubectl port-forward nodehelloworld.example.com 8080

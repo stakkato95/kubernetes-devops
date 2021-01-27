@@ -1,0 +1,12 @@
+//attach to shell
+kubectl attach nodehelloworld.example.com
+
+//exec cmd
+kubectl exec nodehelloworld.example.com -- ls /app
+
+kubectl describe service nodehelloworld-example-com
+
+//talk to another pod via telnet
+kubectl run -i --tty busybox --image busybox --restart=Never
+//im Pod: telnet 10.1.0.15 8080
+//im Pod: GET /
