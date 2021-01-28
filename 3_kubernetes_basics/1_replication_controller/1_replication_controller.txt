@@ -1,0 +1,8 @@
+//scale ReplicationController by name
+kubectl scale --replicas=1 rc/helloworld-controller
+
+//scale ReplicationController by file name
+kubectl scale --replicas=1 -f 1_replication_controller.txt
+
+//get ReplicationControllers
+kubectl get rc
