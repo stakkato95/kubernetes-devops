@@ -1,0 +1,5 @@
+//crete pod
+kubectl create -f 3_pod_for_service.yml
+
+//create service
+3_helloworld-nodeport-service.yml
