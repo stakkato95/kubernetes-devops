@@ -1,0 +1,12 @@
+//show labels of nodes
+kubectl get nodes --show-labels
+
+//create deployment
+kubectl create -f 4_helloworld-nodeselector.yml
+
+//add label to a node
+kubectl label nodes minikube hardware=high-spec
+
+//check labels
+kubectl get nodes --show-labels
+kubectl describe node minikube

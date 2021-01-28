@@ -1,0 +1,7 @@
+//show labels of nodes
+kubectl get nodes --show-labels
+
+//
+
+//add label to a node
+kubectl label nodes minikube hardware=high-spec
