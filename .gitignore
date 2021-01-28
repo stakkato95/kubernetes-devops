@@ -86,3 +86,5 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+
+.DS_Store
