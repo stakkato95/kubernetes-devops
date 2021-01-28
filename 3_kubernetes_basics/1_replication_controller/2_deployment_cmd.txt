@@ -1,0 +1,18 @@
+//create deployment
+kubectl create -f 2_helloworld-deployment.yml
+
+kubectl get deployments
+
+kubectl get pods --show-labels
+
+//check rollout status
+kubectl rollout status deployment/helloworld-deployment
+
+//update deployment
+kubectl expose deployment helloworld-deployment --type=NodePort
+//check a running service
+minikube service helloworld-deployment
+//set new image
+kubectl set image deployment/helloworld-deployment k8s-demo=k8s.gcr.io/echoserver
+//rollout new deployment
+kubectl rollout status deployment/helloworld-deployment
