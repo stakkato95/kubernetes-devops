@@ -1,0 +1,2 @@
+echo "user" | base64
+echo "pwd" | base64
